@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lato", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-primary: #C5FF4A;
+  --color-brand-bg: #0E0E10;
+  --color-brand-card: #1A1A1D;
+  --color-brand-border: #2D2D33;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brand-bg text-gray-200 font-sans antialiased selection:bg-brand-primary selection:text-black;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
