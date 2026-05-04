@@ -5,7 +5,6 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: './',
     plugins: [react(), tailwindcss()],
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.

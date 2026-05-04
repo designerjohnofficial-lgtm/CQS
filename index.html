@@ -4,36 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CQS Training</title>
-    <script>
-      (function() {
-        try {
-          var originalFetch = window.fetch;
-          Object.defineProperty(window, 'fetch', {
-            get: function() { return originalFetch; },
-            set: function() { console.warn('Blocked attempt to override window.fetch'); },
-            configurable: true,
-            enumerable: true
-          });
-        } catch (e) {}
-
-        window.onerror = function(msg, url, lineNo, columnNo, error) {
-          var div = document.createElement('div');
-          div.style.position = 'fixed';
-          div.style.top = '0';
-          div.style.left = '0';
-          div.style.background = 'red';
-          div.style.color = 'white';
-          div.style.zIndex = '9999';
-          div.style.padding = '20px';
-          div.innerText = 'Run Error: ' + msg + '\n' + (error ? error.stack : '');
-          document.body.appendChild(div);
-        };
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
 
