@@ -227,6 +227,16 @@ export default function App() {
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="flex items-center justify-center gap-8 mb-12 opacity-40 grayscale hover:grayscale-0 transition-all duration-500"
+          >
+            {['LAW SOCIETY', 'SRA ACCREDITED', 'COI APPROVED', 'UK LEGAL'].map(logo => (
+              <span key={logo} className="text-[10px] font-black tracking-[0.2em] text-white whitespace-nowrap">{logo}</span>
+            ))}
+          </motion.div>
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 bg-brand-primary/10 border border-brand-primary/20 px-4 py-2 rounded-full mb-8"
